@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 
+import Heading from "./components/Heading";
 import AddTask from "./components/AddTask";
 import List from "./components/List";
 import ClearData from "./components/ClearData";
@@ -35,27 +36,27 @@ function App() {
     localStorage.setItem("completedTasks", JSON.stringify(newCompletedTasks));
   }
 
-  const clearData = () => {
-    localStorage.clear();
-    setTasks([]);
+  const clearCompletedTasks = () => {
     setCompletedTasks([]);
+    localStorage.removeItem("completedTasks");
   }
 
   return (
     <main>
+      <Heading />
       <AddTask onAdd={addTask} />
       <div className={`list-container ${tasks.length > 0 ? "show" : ""}`}>
         <div>
-          <List list={tasks} heading="To Do List" onComplete={addCompleteTask} onRemove={removeTask} />
+          <List list={tasks} heading="In Progress" onComplete={addCompleteTask} onRemove={removeTask} />
         </div>
       </div>
-      
+
       <div className={`list-container ${completedTasks.length > 0 ? "show" : ""}`}>
         <div>
-        <List list={completedTasks} heading="Completed Tasks" />
+          <List list={completedTasks} heading="Completed" />
         </div>
       </div>
-      {(tasks.length > 0 || completedTasks.length > 0) && <ClearData onClear={clearData} />}
+      {completedTasks.length > 0 && <ClearData onClear={clearCompletedTasks} />}
     </main>
   )
 }

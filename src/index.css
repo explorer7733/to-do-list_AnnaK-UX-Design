@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yuji+Mai&display=swap');
 
 *, *::before, *::after{
   box-sizing: border-box;
@@ -122,7 +123,7 @@ main {
 /* button */
 .btn {
   background-color: unset;
-  border: none;
+  border: 1px solid transparent;
   border-radius: 5px;
   outline: none;
   padding: 5px 10px;
@@ -132,15 +133,14 @@ main {
 
 .btn-add {
   color: var(--add-btn-color);
-  border: 1px solid var(--add-btn-color);
+  border-color:  var(--add-btn-color);
   font-size: 1.3rem;
   width: 100px;
   font-weight: bold;
   padding: 5px 10px;
 }
 
-.btn-add:hover,
-.btn-add:focus {
+.btn-add:hover {
   background-color: var(--add-btn-color);
   color: white;
 }
@@ -156,23 +156,20 @@ main {
 
 .btn-complete,
 .btn-delete{
-  border: 1px solid transparent;
   border-radius: 5px;
   padding: 10px;
 }
 
-.btn-complete:hover,
-.btn-complete:focus{
+.btn-complete:hover{
   border-color: var(--check-btn-color);
 }
 
-.btn-delete:hover,
-.btn-delete:focus{
+.btn-delete:hover{
   border-color: var(--remove-btn-color);
 }
 
 .btn-clear {
-  border: 1px solid var(--remove-btn-color);
+  border-color:  var(--remove-btn-color);
   color: var(--remove-btn-color);
   align-self: flex-start;
   font-size: 2rem;
@@ -180,21 +177,19 @@ main {
   
 }
 
-.btn-clear:hover,
-.btn-clear:focus{
+.btn-clear:hover{
   background-color: var(--remove-btn-color);
   color: white;
 }
 
 .btn-erase {
-  border: 1px solid var(--remove-btn-color);
+  border-color: var(--remove-btn-color);
   color: var(--remove-btn-color);
   font-weight: bold;
   transition-property: background-color, color;
 }
 
-.btn-erase:hover,
-.btn-erase:focus {
+.btn-erase:hover {
   background-color: var(--remove-btn-color);
   color: white;
 }
@@ -213,6 +208,17 @@ main {
 
 .list-container.show {
   grid-template-rows: 1fr;
+}
+
+/* header */
+.header {
+  font-family: "Yuji Mai", 'Times New Roman', Times, serif;
+  font-size: 3rem;
+  margin-bottom: 30px;
+}
+
+.header .icon {
+  font-size: 2rem;
 }
 
 /* Animation */
