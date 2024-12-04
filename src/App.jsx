@@ -36,6 +36,17 @@ function App() {
     localStorage.setItem("completedTasks", JSON.stringify(newCompletedTasks));
   }
 
+  const editTask = (id) => {
+    const updatedTasks = tasks.map((task) => {
+      if (task.id === id) {
+        return { ...task, description: task.description };
+      }
+      return task;
+    });
+    setTasks(updatedTasks);
+    localStorage.setItem("tasks", JSON.stringify(updatedTasks));
+  }
+
   const clearCompletedTasks = () => {
     setCompletedTasks([]);
     localStorage.removeItem("completedTasks");
