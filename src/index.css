@@ -7,11 +7,11 @@
 }
 
 :root {
-  --add-btn-color: rgb(101, 216, 8);
-  --check-btn-color: #182cdf;
-  --remove-btn-color: rgba(230, 10, 10, 0.932);
-  --text-primary-color:rgba(230, 10, 10, 0.932) ;
-  --text-secondary-color:#182cdf;
+  --add-btn-color: #233A66;
+  --check-btn-color: #FFD691;
+  --remove-btn-color: #c44251;
+  /*--text-primary-color:rgba(230, 10, 10, 0.932) ;
+  /*--text-secondary-color:#182cdf;*/
   --time-duration: 0.3s;
   --time-function: ease-in-out;
 }
@@ -25,7 +25,7 @@ html {
 body {
   font-size: 1.2rem;
   margin: 0 auto;
-  background: linear-gradient(to right, #182cdf 0%, #182cdf 22%, rgb(74, 163, 1) 50%,#182cdf 77%, #182cdf 100%);
+  background: linear-gradient(to right, #233A66 0%, #233A66 22%, #FFD691 50%, #233A66 77%, #233A66 100%);
 }
 
 h1, h2, h3, p {
@@ -35,11 +35,11 @@ h1, h2, h3, p {
 
 h2 {
   padding: 10px;
-  color: rgb(101, 216, 8);
+  color: #ffffffb4;
 }
 
 p, p2 {
-  color:rgb(101, 216, 8);
+  color: #ffffffb4;
 }
 
 main {
@@ -73,6 +73,7 @@ main {
   list-style: none;
   margin-bottom: 0;
   margin-top: 0;
+  background: none;
 }
 
 .list-item {
@@ -84,9 +85,10 @@ main {
   padding-top: 3px;
   padding-left: 5px;
   padding-right: 5px;
-  border: 1.5px solid var(--text-secondary-color);
+  border: 1.5px solid #233A66;
   border-radius: 2px;
   box-shadow: 0 2px 5cqb rgba(0, 0, 0, 0.7);
+  
 }
 
 /* task-description */
@@ -94,32 +96,33 @@ main {
   width: 70%;
   font-size: 1.4rem;
   transition: color 0.5s ease;
-  color:#182cdf;
+  color: #FFD691;
 }
 
 .task-description p:first-child{
   font-size: 1rem;
   margin-bottom: 5px;
   transition: color 0.5s ease; 
+  color: #FFD691;
 }
 
 /* Fade effect for the completed tasks */
 .complete-task{
   transition: opacity 0.5s ease;
-  color:#182cdf;
+  /*color:#182cdf;*/
 }
 .complete-task.fade-in {
   opacity: 1; 
-  background-color: rgb(96, 189, 20);
+  background-color:/*#f5b546b6*/#FFD691;
   transition: opacity 0.5s ease;
-  color:#182cdf;
+  color: #233A66;
 }
 
 .complete-task .task-description,
 .complete-task .task-description p,
 .complete-task .task-description p2 {
   transition: color 05.s ease;
-  color:#182cdf;
+  color: #233A66;
 }
 
 /* task form */
@@ -130,24 +133,24 @@ main {
   align-items: center;
   gap: 10px;
   margin-bottom: 10px;
-  box-shadow: 0 2px 5cqb rgb(96, 189, 20)(0, 0, 0, 0.7);
+  box-shadow: 0 2px 5cqb #233A66 (0, 0, 0, 0.7);
 }
 
 .task-form textarea {
   width: 100%;
   resize: none;
   outline: none;
-  color:#182cdf;
+  color: #233A66;
   border-radius: 8px;
-  border: 1.5px solid rgb(96, 189, 20);
+  border: 1.7px solid #233A66;
   padding: 10px;
-  background-color: rgb(96, 189, 20);
-  box-shadow: 0 8px 5cqb rgb(96, 189, 20)(0, 0, 0, 0.9);
+  background-color: /*#f5b546b6*/ #FFD691;
+  box-shadow: 0 8px 5cqb #FFD691(0, 0, 0, 0.9);
   font-family: 'Play', sans-serif;
 }
 
 .task-form textarea:focus{
-  border-color: #182cdf;
+  border-color: #233A66;
 }
 
 .task-form .btn-group {
@@ -186,11 +189,11 @@ main {
 
 .btn-add:hover {
   background-color: var(--add-btn-color);
-  color: rgba(10, 22, 54, 0.788);
+  color: #ffffffb4;
 }
 
 .btn-complete {
-  color: rgb(101, 216, 8);
+  color: #FFD691;
   margin-right: 10px;
 }
 
@@ -225,7 +228,7 @@ main {
 
 .btn-clear:hover{
   background-color: var(--remove-btn-color);
-  color: white;
+  color: #ffffffb4;
 }
 
 .btn-erase {
@@ -238,7 +241,7 @@ main {
 
 .btn-erase:hover {
   background-color: var(--remove-btn-color);
-  color: white;
+  color: #ffffffb4;
 }
 
 /* list container */
@@ -262,7 +265,7 @@ main {
   font-family: 'Play', sans-serif;
   font-size: 3rem;
   margin-bottom: 30px;
-  color: #182cdf;
+  color: #233A66;
 }
 
 .header .icon {
@@ -288,7 +291,7 @@ main {
 
 .empty-list {
   animation: fadeInOut 3s ease-in-out infinite;
-  color: red;
+  color: #c44251;
   font-size: 1.5rem;
   font-family: 'Play', sans-serif;
   text-align: center;
